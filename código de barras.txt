@@ -1,0 +1,75 @@
+#include <iostream>
+#include <stdio.h>
+#define max 13
+
+using namespace std;
+
+
+int main()
+{
+    int n0, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12;
+    long zap ; // Essa é a variavel que recebe o codigo de barras
+    int som, som1, som3, som4, som2; // Essas sao as variaveis que recebem as contas
+    
+    
+    cout<< "Por favor digite Seu codigo de barras: " ;
+    cin>> zap; 
+    
+    n12 = zap % 10;
+    n11 = zap /10 % 10; 
+    n10 = zap  /100 % 10; 
+    n9= zap  /1000 % 10;
+    n8 = zap  /10000 % 10;
+    n7 = zap  /100000 % 10;
+    n6 = zap  /1000000 % 10;
+    n5 = zap  /10000000 % 10;
+    n4 = zap  /100000000 % 10;
+    n3 = zap  /1000000000 % 10;
+    n2 = zap /10000000000 % 10;
+    n1= zap  /100000000000 % 10;
+    n0 = zap /1000000000000 % 10;  // Essa é a parte em que sapara os numeros 
+    
+    n0 = n0 * 1;
+    n1 = n1 * 3;
+    n2 = n2 * 1;
+    n3 = n3 * 3;
+    n4 = n4 * 1;
+    n5 = n5 * 3;
+    n6 = n6 * 1;
+    n7 = n7 * 3;
+    n8 = n8 * 1;
+    n9 = n9 * 3;
+    n10 = n10 * 1;
+    n11 = n11 * 3; // Essa é a parte onde cada numero é multiplicado
+        
+     som = (n0+n1+n2+n3+n4+n5+n6+n7+n8+n9+n10+n11);
+    som1 = som / 10;
+    som2 = som1 + 1;
+    som3 = som2 * 10;
+    som4 = som3 - som; // Aqui é onde o algoritmo é efeituado
+    
+    
+    if (som4 % 10 == 0 )
+    { 
+        som4 = 0;
+       
+    } 
+    else if(som4 == n12)
+    { 
+        cout<<"Seu codigo de barras esta correto.";
+    }
+    else if (som4 != n12)
+    {
+        cout<< "Seu codigo está errado, tente novamente.";
+    }
+   // E essa é a parte final
+   
+    
+    
+ return 0;
+
+}
+
+
+
+Link do vídeo: https://www.youtube.com/watch?v=5T40o84YX94
